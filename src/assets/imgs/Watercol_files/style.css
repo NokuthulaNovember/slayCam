@@ -1,0 +1,1285 @@
+html, body {
+  width: 100%;
+  overflow-x: hidden
+}
+body {
+  margin: 0; padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: #f4f8fb;
+}
+h1, h2, h3, h4, h5, p, a, ul, li {
+  margin: 0; padding: 0;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+h2 {
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  color: #1e2e38;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+input, textarea {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+}
+h2 span {
+  color: #83cd14;
+}
+input:focus {
+  outline-width: 0;
+}
+textarea:focus {
+  outline-width: 0;
+}
+button { 
+  outline-width: 0;
+  border: none;
+}
+#headerc {
+  height: 75px;
+  background: #1e2e38;
+}
+#header {
+  width: 980px;
+  margin: 0 auto;
+}
+#logo-nav {
+  margin-top: 1px;
+}
+#header > div {
+  float: right;
+  margin-top: 16px;
+}
+#header #myfavorite {
+  background: #83cd14;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 20px;
+  margin-right: 15px;
+  border-radius: 20px;
+  border-bottom: 3px solid #4c7e02;
+  text-transform: capitalize;
+}
+#header #myfavorite img {
+  display: inline-block;
+  margin-bottom: -3px;
+  margin-right: 5px;
+}
+#header #myfavorite:hover {
+  background-color: #8de10e;
+}
+#header form {
+  display: inline;
+}
+#header .homesearch {
+  background: #fff;
+  border: none;
+  width: 270px;
+  height: 36px;
+  border-radius: 20px 0 0 20px;
+  font-size: 13px;
+  padding-left: 20px;
+  color: #1e2e38;
+  border-bottom: 3px solid #a1b1bb;
+}
+#header .search-icon {
+  background: #83cd14;
+  border-radius: 0 20px 20px 0;
+  float: right;
+  margin-left: -1px;
+  height: 41px;
+}
+
+#subheader {
+  padding: 60px 0;
+  text-align: center;
+  background: #19252d;
+}
+#subheader h1 {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 45px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+#subheader h1 span {
+  color: #83cd14;
+}
+#subheader p {
+  font-size: 18px;
+  color: #718c9d;
+  margin-top: 10px;
+}
+
+#long-ad {
+  text-align: center;
+  margin: 20px auto;
+}
+#long-ad img {
+  width: 980px; height: 90px;
+}
+
+#featured-cliparts {
+  width: 980px;
+  margin: 40px auto 49px;
+  padding-left: 1px;
+  text-align: center;
+}
+#featured-cliparts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+/*
+#featured-cliparts h2 {
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  color: #1e2e38;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+#featured-cliparts h2 span {
+  color: #83cd14;
+}
+*/
+.clipart-tmb {
+  width: 194px;
+  height: 194px;
+  text-align: center;
+  float: left;
+  background: #fff;
+  border: 1px solid #eae9f7;
+  border-collapse: collapse;
+  position: relative;
+}
+.clipart-tmb .thumbnail {
+  width: 193px; height: 193px;
+  max-width: 193px;
+  display: table-cell;
+  vertical-align: middle;
+
+}
+.clipart-tmb:hover {
+  /*border: 2px solid #83cd14;*/
+}
+.selected-border {
+  display: none;
+}
+.clipart-tmb:hover .selected-border {
+  display: block;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  z-index: 1;
+  border: 2px solid #83cd14;
+  width: 194px;
+  height: 194px;
+}
+.clipart-tmb .thumbnail img {
+  max-width: 70%;
+  max-height: 70%;
+}
+.cliparts-grid {
+  border: 1px solid #eae9f7;
+  width: 980px;
+}
+.cliparts-grid p {
+  margin: -21px 0 31px 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+.cliparts-grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#more-cliparts {
+  background: #83cd14;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 40px 10px 15px;
+  background-image: url('img/more.png')/*tpa=http://cliparts.co/img/more.png*/;
+  background-size: 20px 20px;
+  background-position: top 10px right 10px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border-bottom: 3px solid #4c7e02;
+  margin-top: 44px;
+  display: inline-block;
+}
+
+#mostloved-clipartsc {
+  background: #fff;
+  padding: 20px 0;
+}
+#mostloved-cliparts {
+  width: 980px;
+  margin: 40px auto 49px;
+}
+#mostloved-cliparts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#recent-cliparts {
+  width: 980px;
+  margin: 40px auto 49px;
+}
+#recent-cliparts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#new-collectionsc {
+  padding: 30px 0;
+}
+#new-collections {
+  width: 980px;
+  margin: 0 auto;
+}
+#new-collections:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#new-collections h2 {
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  color: #1e2e38;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+#clipart-container {
+  width: 980px;
+  margin: 30px auto;
+}
+#clipart-container #main-content {
+  width: 500px;
+  margin: 0 10px;
+  float: left;
+}
+#clipart-container #sidebar {
+  width: 300px;
+  float: left;
+}
+
+#clipart-main-information {
+  width: 500px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  margin-bottom: 30px;
+  text-align: center;
+}
+#clipart-main-information h2 {
+  display: none;
+}
+#clipart-main-information #addtofavorite {
+  border-radius: 17px;
+  box-shadow: 0px 2px 5px 0px rgba( 0, 0, 0, 0.2 );
+  background-color: #f4f8fb;
+  color: #9b9ea0;
+  padding: 9px 25px 0px 40px;
+  background-image: url('img/addtofavorite.png')/*tpa=http://cliparts.co/img/addtofavorite.png*/;
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center left 20px;
+  height: 26px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 15px auto;
+}
+#clipart-main-information #addtofavorite.favorited {
+  border-radius: 17px;
+  box-shadow: 0px 2px 5px 0px rgba( 0, 0, 0, 0.2 );
+  color: #fff;
+  padding: 9px 25px 0px 40px;
+  background: #83cd14 url('img/star-green.svg')/*tpa=http://cliparts.co/img/star-green.svg*/ no-repeat top 9px left 15px;
+  background-size: 17px 16px;
+  height: 26px;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  margin: 15px auto;
+}
+#clipart-main-information #addtofavorite.favorited:hover {
+  background-color: #8de10e;
+}
+#clipart-main-information #image-container {
+  max-width: 70%;
+  max-height: 70%;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  display: block;
+}
+#clipart-main-information #main-image {
+  max-height: 90%; max-width: 90%;
+}
+#clipart-main-information h1 {
+  border-top: 1px solid #eae9f7;
+  font-size: 14px;
+  font-weight: 700;
+  color: #718c9d;
+  padding: 20px;
+  font-weight: normal;
+  font-size: 12px;
+  text-align: center;
+}
+
+h2#comment-title {
+  font-size: 20px;
+  color: #1e2e38;
+  text-align: left;
+  border-bottom: 1px solid #dce1e9;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+.clipart-comment {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e1e6ec; 
+}
+.comment-author {
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e2e38;
+}
+.comment-date {
+  font-size: 12px;
+  color: #83cd14;
+  float: right;
+  font-weight: 300;
+}
+.comment-text {
+  font-size: 13px;
+  color: #92a6b3;
+  font-style: italic;
+}
+.comment-yourname {
+  width: 278px; height: 9px;
+  float: left;
+  padding: 15px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+.comment-youremail {
+  width: 278px; height: 9px;
+  float: left;
+  padding: 15px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  margin-top: 20px;
+}
+.comment-yourcomment {
+  width: 603px; height: 60px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  padding: 15px;
+  margin-top: 10px;
+}
+.enter-comment {
+  background-color: #83cd14;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 40px 10px 19px;
+  background-image: url('img/more.png')/*tpa=http://cliparts.co/img/more.png*/;
+  background-size: 20px 20px;
+  background-position: top 10px right 15px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border-bottom: 3px solid #4c7e02;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.enter-comment:hover {
+  background-color: #8ae300 ;
+}
+
+#clipart-container #side-ad {
+  width: 300px; height: 250px;
+  margin-bottom: 30px;
+}
+#clipart-container #clipart-stats {
+  border: 1px solid #eae9f7;
+  background: #fff;
+  margin-bottom: 30px;
+}
+#clipart-container #clipart-stats h3 {
+  display: none;
+}
+#clipart-container #clipart-stats li {
+  padding: 18px 20px 15px;
+  border-bottom: 1px solid #eae9f7;
+  font-size: 13px;
+  color: #718c9d;
+}
+#clipart-container #clipart-stats li.ratingc {
+  text-align: right;
+  padding: 15px 20px;
+  font-weight: 700;
+}
+#clipart-container #clipart-stats li.ratingc .basic {
+  margin-bottom: -15px;
+}
+#clipart-container #clipart-stats li.last {
+  border-bottom: none;
+}
+#clipart-container #clipart-stats li span {
+  font-weight: 700;
+  float: right;
+}
+#clipart-container #tags {
+  background: #fff;
+  border: 1px solid #eae9f7;
+  margin-bottom: 30px;
+}
+#clipart-container #tags h3 {
+  font-size: 13px;
+  color: #718c9d;
+  padding: 20px 20px 10px 20px;
+}
+#clipart-container #tags ul {
+  padding: 0 20px 10px 20px;
+  border-bottom: 1px solid #eae9f7;
+}
+#clipart-container #tags ul li {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+#clipart-container #tags ul li a {
+  height: 19px;
+  padding: 6px 0 7px 0;
+  color: #9cacb6;
+  font-size: 11px;
+  font-weight: 700;
+  background-image: url('img/tags.png')/*tpa=http://cliparts.co/img/tags.png*/;
+  background-size: 12px 18px;
+  background-repeat: no-repeat;
+  background-position: left;
+  padding-left: 11px;
+}
+#clipart-container #tags ul li a span {
+  border: 1px solid #e8eeef;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-left: 0;
+  padding: 0 5px 1px 5px;
+  background-color: #fbfdff;
+  font-weight: normal;
+}
+#clipart-container #tags form {
+  padding: 20px;
+  position: relative;
+}
+#clipart-container #tags .entertag {
+  width: 207px; height: 31px;
+  background: #fbfdff;
+  border: 1px solid #e0e8e9;
+  border-right: none;
+  padding-left: 10px;
+  border-bottom: 3px solid #B5C0C2;
+}
+#clipart-container #tags .entertag::-webkit-input-placeholder { color: #9cacb6 }
+#clipart-container #tags .entertag:-moz-placeholder { color: #9cacb6 }
+#clipart-container #tags .entertag::-moz-placeholder { color: #9cacb6 }
+#clipart-container #tags .entertag:-ms-input-placeholder { color: #9cacb6 }
+#clipart-container #tags .entertag-icon {
+  float: right;
+}
+#entertag-question {
+  background: url('img/entertag-question.png')/*tpa=http://cliparts.co/img/entertag-question.png*/;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  position: absolute;
+  right: 67px; top: 30px;
+  width: 15px; height: 15px;
+  cursor: pointer;
+}
+#entertag-questionbox {
+  font-size: 12px;
+  color: #9b9ea0;
+  background: #f4f8fb;
+  padding: 10px;
+  border-radius: 3px;
+  width: 143px;
+  box-shadow: 0px 2px 5px 0px rgba( 0, 0, 0, 0.2 );
+  position: absolute;
+  top: -45px; right: 21px;
+  display: block;
+}
+#entertag-questionarrow {
+  background: url('img/entertag-questionarrow.png')/*tpa=http://cliparts.co/img/entertag-questionarrow.png*/;
+  width: 15px; height: 22px;
+  background-size: 15px 22px;
+  position: absolute;
+  top: 46px; left: 102px;
+}
+
+#clipart-container #embed {
+  padding: 20px;
+  border: 1px solid #e0e8e9;
+  background: #fff;
+}
+#clipart-container #embed p {
+  font-size: 13px;
+  color: #718c9d;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#clipart-container #embed #embedwebsite {
+  display: inline-block;
+  width: 578px;
+  margin-bottom: 20px;
+}
+#clipart-container #embed #embedwebsite input[type="text"] {
+  width: 100%; height: 33px;
+  background: #fbfdff;
+  border: 1px solid #e0e8e9;
+  padding-left: 10px;
+  color: #9cacb6
+}
+#clipart-container #embed #embedblog {
+  display: inline-block;
+  width: 578px;
+}
+#clipart-container #embed #embedblog input[type="text"] {
+  width: 100%; height: 33px;
+  background: #fbfdff;
+  border: 1px solid #e0e8e9;
+  padding-left: 10px;
+  color: #9cacb6
+}
+#embed p strong{
+  color: #83cd14;
+}
+
+#clipart-container #freedownload {
+  background: #83cd14;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px 10px 115px;
+  background-image: url('img/freedownload.png')/*tpa=http://cliparts.co/img/freedownload.png*/;
+  background-size: 17px 16px;
+  background-position: top 12px left 85px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border-bottom: 3px solid #4c7e02;
+  display: block;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+#clipart-container #freedownload:hover {
+  background-color: #8de10e;;
+}
+#additional-cliparts {
+  background: #fff;
+  padding: 30px 0 50px;
+  margin-top: 30px;
+}
+#premium-cliparts {
+  width: 980px;
+  margin: 0 auto;
+}
+#similar-cliparts {
+  width: 980px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+#similar-cliparts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#premium-cliparts:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+#clipart-collections {
+  background: #f4f8fb;
+  padding: 50px 0;
+}
+#clipart-collections {
+  width: 980px;
+  margin: 0 auto;
+}
+#clipart-collections:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+#myfavoritec {
+  width: 980px;
+  margin: 0 auto;
+}
+#myfavoritec h1 {
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  color: #1e2e38;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+#myfavoritec h1 span {
+  color: #83cd14;
+}
+
+.collectionc {
+  width: 980px;
+  margin: 0 auto;
+}
+.collectionc.last {
+  margin-bottom: 50px;
+}
+.collectionc:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.collectionc h1 {
+  text-align: center;
+  font-family: 'Bubblegum Sans', cursive;
+  color: #1e2e38;
+  font-size: 30px;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+.collectionc h1 span {
+  color: #83cd14;
+}
+
+.collection {
+  width: 300px; height: 118px;
+  margin-right: 23px;
+  margin-bottom: 20px;
+  position: relative;
+  float: left;
+}
+.collection:hover .collection-title {
+  border: 1px solid #83cd14;
+}
+.collection.last {
+  margin-right: 0;
+}
+.collection-thumbnailc {
+  position: absolute;
+  left: 0;
+}
+.collection-thumbnail {
+  width: 118px; height: 118px;
+  background: url('img/collection.png')/*tpa=http://cliparts.co/img/collection.png*/;
+  background-size: 118px 118px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.collection-thumbnail img {
+  max-width: 50%; max-height: 50%;
+}
+.collection-title {
+  background: #fff;
+  border: 1px solid #eae9f7;
+  width: 152px;
+  height: 44px;
+  font-size: 14px;
+  float: left;
+  padding: 19px 20px 20px 30px;
+  margin-top: 17px;
+  margin-left: 106px;
+  font-weight: 700;
+  color: #384146;
+}
+.collection-title .numberofcliparts {
+  font-size: 14px;
+  font-weight: 700;
+  color: #83cd14;
+  display: block;
+  margin-top: 9px;
+}
+
+.collectionc #caption{
+  text-align: center;
+  margin: -21px 0 31px 0;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+#footer-page {
+  width: 980px;
+  margin: 50px auto 30px;
+  padding-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ebeaf8;
+}
+#footer-page-nav {
+  border-bottom: 1px solid #ebeaf8;
+}
+#footer-page-nav li {
+  display: inline-block;
+  padding: 20px 0;
+}
+#footer-page-nav li a {
+  padding: 0px 40px;
+  font-size: 14px;
+  color: #718c9d;
+  display: block;
+  margin-bottom: -2px;
+  border-right: 1px solid #b1b5b8;
+}
+#footer-page-nav li a:hover {
+  color: #1e2e38;
+}
+#footer-page-nav li.active {
+  border-bottom: 3px solid #83cd14;
+}
+#footer-page-nav li a.last {
+  border-right: none;
+}
+#footer-page h1 {
+  padding: 40px 40px 0 40px;
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 23px;
+  color: #1e2e38;
+  margin-bottom: 20px;
+}
+#footer-page h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #1e2e38;
+  text-align: left;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+#footer-page p {
+  padding: 0 40px 0 40px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #7c91a6;
+  margin-bottom: 30px;
+}
+#footer-page ul.cul {
+  padding: 0 40px 0 40px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #7c91a6;
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+#footer-page ul.cul li {
+  margin-left: 35px;
+  list-style-type: circle;
+}
+
+#contact-form {
+  width: 635px;
+  padding-left: 40px;
+  margin-top: -24px;
+}
+.contact-yourname {
+  width: 278px; height: 13px;
+  float: left;
+  padding: 12px 15px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  margin-right: 15px;
+  margin-top: 20px;
+}
+.contact-youremail {
+  width: 278px; height: 13px;
+  float: left;
+  padding: 12px 15px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  margin-top: 20px;
+}
+.contact-yourmessage {
+  width: 603px; height: 60px;
+  border: 1px solid #eae9f7;
+  background: #fff;
+  padding: 15px;
+  resize: vertical;
+  margin-top: 10px;
+}
+.sendmessage {
+  background-color: #83cd14;
+  color: #fff;
+  font-size: 13px;
+  padding: 10px 40px 10px 19px;
+  background-image: url('img/more.png')/*tpa=http://cliparts.co/img/more.png*/;
+  background-size: 20px 20px;
+  background-position: top 10px right 15px;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  border-bottom: 3px solid #4c7e02;
+  margin: 25px 0 50px;
+  cursor: pointer;
+}
+.sendmessage:hover {
+  background-color: #8ae300 ;
+}
+
+#statsc {
+  background: #1e2e38;
+  height: 174px;
+}
+#stats {
+  width: 980px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+#stats:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#stats .stat {
+  display: inline-block;
+  width: 29%;
+  float: right;
+}
+#stats .stat img {
+  float: left;
+  margin-top: 4px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+#stats .stat .number {
+  color: #83cd14;
+  font-size: 27px;
+  font-weight: 700;
+  font-family: 'Bubblegum Sans', cursive;
+}
+#stats .stat span {
+  color: #718c9d;
+  font-size: 15px;
+  font-weight: 700;
+  display: block;
+}
+#footerc {
+  background: #83cd14;
+  height: 93px;
+}
+#footer{
+  width: 980px;
+  margin: 0 auto;
+}
+#footer:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#footer #copyright {
+  font-size: 13px;
+  color: #487306;
+  padding-top: 42px;
+}
+#footer span#copy:after {
+  font-size:9px;
+  padding: 0 10px;
+  content: " • ";
+}
+#footer span#rights {
+
+}
+
+#footer ul {
+  float: right;
+  margin-top: -19px;
+}
+#footer ul li {
+  display: inline-block;
+  font-size: 9px;
+  color: #487306;
+  margin-right: 10px;
+}
+#footer ul li:after {
+  content: " • ";
+}
+#footer ul li.last:after {
+  content: none;
+}
+#footer ul li a {
+  color: #487306;
+  padding-right: 10px;
+  font-size: 13px;
+}
+#footer ul li a:hover {
+  text-decoration: underline;
+}
+
+#paged{
+  margin: -20px 0 30px 0;
+  padding: 0 40px 0 40px;
+  font-size: 13px;
+  line-height: 18px;
+  color: #7c91a6;
+  text-align: center;
+}
+#paged p{
+  margin: -21px 0 31px 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: #000;
+}
+
+#pagenotfound {
+  background: #fff;
+  border: 1px solid #eff0f9;
+  padding: 80px 0 140px;
+  text-align: center;
+  width: 980px;
+  margin: 40px auto;
+}
+#pagenotfound #panel {
+  width: 268px;
+  height: 340px;
+  position: relative;
+  margin: 0 auto 50px;
+}
+#pagenotfound img {
+  width: 268px;
+  height: 340px;
+}
+#pagenotfound h1 {
+  color: #fff;
+  font-family: 'Bubblegum Sans', cursive;
+  font-weight: 400;
+  font-size: 82px;
+  position: absolute;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  top: 30px;
+  left: 43px;
+}
+#pagenotfound p {
+  font-family: 'Bubblegum Sans', cursive;
+  font-size: 25px;
+  color: #4c7e02;
+  margin-top: -20px;
+  margin-bottom: 75px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 99;
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
+  top: 130px;
+  left: 52px;
+}
+#pagenotfound a {
+  background-color: #83cd14;
+  background-image: url("img/back-green.png")/*tpa=http://cliparts.co/img/back-green.png*/;
+  background-repeat: no-repeat;
+  background-size: 16px 13px;
+  background-position: top 50% left 20px;
+  padding: 10px 20px 10px 50px;
+  border-radius: 17px;
+  font-size: 13px;
+  color: #fff;
+  border-bottom: 3px solid #4c7e02;
+}
+#clipart-collectionsc {
+  background: #fff;
+}
+#clipart-collections {
+  background: #fff;
+  margin-top: 60px;
+}
+@media only screen and (max-width: 980px) {
+  #header, #featured-cliparts, #mostloved-cliparts, #new-collections, #stats, #footer, #clipart-container,
+  #similar-cliparts, .collectionc, #footer-page {
+    width: 95%;
+  }
+  .cliparts-grid {
+    width: 100%;
+  }
+  .clipart-tmb {
+    width: calc(100%/5 - 2px);
+  }
+  .collection {
+    width: calc(100%/2 - 23px);
+  }
+  .collection-title {
+    width: calc(100% - 168px);
+  }
+  .collection.last {
+    margin-right: 23px;
+  }
+  .clipart-tmb:hover .selected-border, .selected-border {
+    display: none;
+  }
+  #clipart-container #main-content {
+    width: calc(95% - 300px);
+    margin-right: 5%;
+  }
+  #clipart-main-information {
+    width: 100%;
+  }
+  #clipart-container #embed #embedwebsite, #clipart-container #embed #embedblog {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 760px) {
+  input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+  #headerc {
+    height: auto;
+    padding-bottom: 10px;
+  }
+  #header > div {
+    display: none;
+    float: none;
+  }
+  #header #myfavorite {
+    float: left;
+    margin-bottom: 10px;
+    width: 160px;
+    margin-right: 15px;
+    text-align: center;
+  }
+  #header form {
+    display: inline-block;
+    width: calc(100% - 215px);
+  }
+  #header .homesearch {
+    width: calc(100% - 64px);
+    float: left;
+  }
+  #header .search-icon {
+    float: left;
+  }
+  #stats .stat {
+    width: calc(100%/3);
+  }
+  .collection {
+    width: 100%
+  }
+  #stats .stat:last-of-type {
+    margin-left: 20px;
+  }
+  #stats .stat:first-of-type {
+    width: calc(100% / 3 - 20px);
+  }
+  .clipart-tmb .thumbnail {
+    width: 150px;
+    max-width: 150px;
+  }
+  #mobile-menu {
+    display: block;
+    float: right;
+    width: 43px;
+    height: 38px;
+    background: url('img/mobile-menu.png')/*tpa=http://cliparts.co/img/mobile-menu.png*/;
+    background-size: 43px;
+    margin-top: 13px;
+    cursor: pointer;
+  }
+  #mobile-menu.on {
+    background: url('img/mobile-menu-close.png')/*tpa=http://cliparts.co/img/mobile-menu-close.png*/;
+    background-size: 43px;
+  }
+  #clipart-container #main-content {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  #clipart-container #tags .entertag {
+    width: calc(100% - 51px);
+    padding: 1px 1px 1px 10px;
+    border-radius: 3px 0 0 3px;
+  }
+  #clipart-container #tags .entertag-icon {
+    border-radius: 0 3px 3px 0;
+  }
+  #clipart-container #sidebar {
+    width: 100%;
+  }
+  #contact-form {
+    width: calc(100% - 40px);
+    padding-left: 20px;
+  }
+  #footer-page {
+    margin: 15px auto;
+  }
+  #footer-page h1 {
+    margin-bottom: 0;
+    padding: 20px 20px 0 20px;
+  }
+  #footer-page p {
+    padding: 20px;
+    margin-bottom: 0;
+  }
+  #footer-page h2 {
+    padding-left: 20px;
+    margin: 0;
+  }
+  #footer-page ul.cul {
+    padding: 0 20px 0 20px;
+    margin: 0;
+  }
+  #footer-page-nav li a {
+    padding: 0px 20px;
+  }
+  .contact-yourname {
+    width: calc(100%/2 - 47px);
+  }
+  .contact-youremail {
+    width: calc(100%/2 - 32px);
+  }
+  .contact-yourmessage {
+    width: calc(100% - 32px);
+  }
+  .sendmessage {
+    margin: 10px 0;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .clipart-tmb {
+    width: calc(100%/2 - 2px);
+  }
+  .clipart-tmb .thumbnail {
+    width: 300px;
+    max-width: 300px;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #clipart-container #tags {
+    margin-bottom: 0;
+  }
+  #header #myfavorite {
+    margin-bottom: 10px;
+    width: calc(100% - 40px);
+    margin-right: 0;
+  }
+  #header form {
+    width: 100%;
+  }
+  #header .homesearch {
+    width: calc(100% - 64px);
+    padding: 1px 2px 1px 20px;
+  }
+  #subheader {
+    padding: 30px 0;
+  }
+  #subheader h1 {
+    font-size: 32px;
+  }
+  #subheader p span {
+    display: block;
+  }
+  #statsc {
+    height: auto;
+  }
+  #stats {
+    padding: 20px 0;
+  }
+  #stats .stat {
+    width: 100% !important;
+    text-align: center;
+    float: none;
+    margin-left: 0 !important;
+    margin-bottom: 20px;
+  }
+  #stats .stat img {
+    float: none;
+    margin-right: 0;
+  }
+  #footer #copyright {
+    padding-top: 0;
+  }
+  #footer ul {
+    margin-top: 20px;
+    float: none;
+  }
+  #footer ul li {
+    margin: 0 0 20px 0;
+    display: block;
+  }
+  #footer ul li a {
+    padding: 0;
+  }
+  #footerc {
+    height: auto;
+    padding: 30px 0;
+    text-align: center;
+  }
+  #footer ul li:after {
+    content: none;
+  }
+  #footer ul li.last {
+    margin-bottom: 0;
+  }
+  #footer-page-nav li {
+    text-align: center;
+    width: calc(100%/3 - 2px);
+  }
+  #footer-page-nav li:last-of-type {
+    width: calc(100%/3 - 3px);
+  }
+  #footer-page-nav li span {
+    display: none;
+  }
+  .contact-yourname {
+    width: calc(100% - 32px);
+    margin-top: 20px;
+  }
+  .contact-youremail {
+    width: calc(100% - 32px);
+    margin-top: 10px;
+  }
+}

@@ -1,14 +1,61 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+   <ion-title>
+     Slaying Cam
+   </ion-title>
   </ion-navbar>
-</ion-header>
+  </ion-header>
+  
+  <ion-content class="img" no-lines no-padding >
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+   
+      <button ion-button class="p" color="light" (click)="takePic()" outline round >
+          <ion-icon ios="ios-camera" md="md-camera"></ion-icon>
+   </button>
+
+
+
+   <button ion-button class="p" color="light" (click)="Gallery()" outline round >
+      <ion-icon ios="ios-images" md="md-images"></ion-icon>
+
+</button>
+<!-- <ion-fab bottom center>
+<button ion-fab color="light"(tap)="switchon()">
+<ion-icon name="ios-flash-outline"></ion-icon>
+</button>
+</ion-fab> -->
+
+<ion-fab bottom center>
+    <button ion-fab class="p" color="light" (click)="switchon()">
+        <ion-icon ios="ios-flash" md="md-flash"></ion-icon>
+
+        <p style="color:purple;">on/off</p>
+        
+    </button>
+</ion-fab>
+
+  <!-- <ion-item class="t1"no-lines no-padding>
+<button ion-button color="light" (tap)="switchon()" outline round>On</button>
+<ion-icon ios="ios-flash" md="md-flash"></ion-icon>
+      
+<button ion-button color="light" (tap)="switchoff()" outline round>Off</button>
+<ion-icon ios="ios-flash" md="md-flash"></ion-icon>
+</ion-item> -->
+   <ion-grid>
+     <ion-row>
+       <ion-col col-6  *ngFor=" let photo of photos; let id =index" >
+
+         <ion-card class="block">
+
+           <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(id)"></ion-icon>
+
+         <img [src]="photo" *ngIf="photo"/>
+
+         </ion-card>
+       </ion-col>
+     </ion-row>
+   </ion-grid>
+
+   <h2><img src="./assets/imgs/camera.png" width="300"height="200"></h2>
+
+  </ion-content>

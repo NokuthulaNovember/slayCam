@@ -1,0 +1,96 @@
+
+$(document).ready(function(){
+
+  $('#entertag-questionbox').hide();
+
+  $("#entertag-question").hover(function() {
+    $('#entertag-questionbox').fadeIn();
+  })
+
+  $("#entertag-question").mouseout(function() {
+    $('#entertag-questionbox').fadeOut();
+  })
+
+  // favorites
+  $("#addtofavorite").click(function() {
+    var hash = $(this).attr("data-hash");
+    var id = $(this).attr("data-id");
+    var type = $(this).attr("data-type");
+    var nfav = parseInt($(this).attr("nfav"));
+    var favObj = {
+      "hash" : hash,
+      "id" : id,
+      "type" : type,
+    };
+    var cookieval = [];
+    var exists = false;
+    if($.cookie('favorites')) {
+      cookieval = JSON.parse($.cookie('favorites'));
+      var count = 0;
+      var del = 0;
+      $.each(cookieval, function(i) {
+        console.log(cookieval[i]);
+        if(cookieval[i].id == id){
+          //Already favorited
+          console.log("Already Favorite");
+          exists = true;
+          del = count;
+        }
+        count ++;
+      });
+      if(exists == false){//not favorited yet, insert into the cookie
+        console.log("First time favorited");
+        $(this).attr("class", "favorited");
+        $('#favorite-text').html("Favorite");
+        nfav = nfav + 1;
+        cookieval.push(favObj);
+        $.cookie('favorites', JSON.stringify(cookieval), { path: '/' }); 
+      }else{
+        if(count == 1){
+          console.log("delete cookie");
+          $(this).attr("class", "");
+          $('#favorite-text').html("Add to favorites");
+          $.removeCookie("favorites", { path: '/' }); //works!!
+          nfav = nfav - 1;
+        }else{
+          console.log("delete from favs");
+          $(this).attr("class", "");
+          $('#favorite-text').html("Add to favorites");
+          cookieval = JSON.parse($.cookie('favorites'));
+          cookieval.splice(del,1);
+          nfav = nfav - 1;
+          $.removeCookie("favorites", { path: '/' }); //works!!
+          $.cookie("favorites", JSON.stringify(cookieval), { path: '/' });
+        }
+      }
+    }else{
+      $(this).attr("class", "favorited");
+      $('#favorite-text').html("Favorite");
+      cookieval.push(favObj);
+      nfav = nfav + 1;
+      $.cookie('favorites', JSON.stringify(cookieval), { path: '/' });
+    }
+    $.post( "/update-favorites", {id: id, nfav: nfav} );
+    $('#nfav').html(nfav + " people favorited");
+    $(this).attr("nfav", nfav);
+  })
+
+});
+
+function listFavorites() {
+  if($.cookie('favorites')) {
+    var favorites = JSON.parse($.cookie('favorites'));
+    $.each(favorites, function(i) {
+      console.log(favorites[i]);
+      var hash = favorites[i].hash;
+      console.log(hash);
+      var hash1 = hash.substring(0, 3);
+      var hash2 = hash.substring(3, 6);
+      $('.cliparts-grid').append("<a href='/clipart/" + favorites[i].id + "' class='clipart-tmb'><div class='thumbnail'><img src='/cliparts/" + hash1 + "/" + hash2 + "/" + hash + "." + favorites[i].type + "' /></div><div class='selected-border'></div></a>")
+    });
+  } else {
+    $('.cliparts-grid').append("<p>You didn't save any clipart as favorite yet!</p>");
+    $('.cliparts-grid').css("border", "none");
+    $('.cliparts-grid').css("text-align", "center");
+  }
+}
